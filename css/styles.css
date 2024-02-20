@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0; 
+}
+
+/*HEADER*/
+
+.header{
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+    grid-area: header;
+}
+
+.header_logo_container_logo{
+
+}
+
+.header_nav{
+    display: flex;
+    align-items: center;
+}
+
+.header_nav_lista{
+    display: flex;
+    list-style-type: none;
+}
+
+.header_nav_lista li{
+    margin-left: 20px;
+}
+
+.header_nav_lista li a:link{
+    color: white;
+    
+}
+
+.header_nav_lista li a:visited{
+    color: orange;
+}
+
+.header_nav_lista li a:hover{
+    color: green;
+}
+
+.header_nav_lista li a:active{
+    color: red;
+}
+
+
+/*MAIN*/
+
+main{
+    grid-area: main;
+    padding: 50px 0;
+}
+
+main .galeria{
+    display: grid;
+    grid-template-columns: repeat(3,200px);
+    grid-template-rows: repeat(4,200px);
+    grid-template-areas: 
+    "uno dos tres"
+    "cuatro cinco seis"
+    ;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+main .galeria div{
+    width:200px;
+    height:200px;
+    overflow: hidden;
+}
+
+main .galeria div:hover{
+    box-shadow: 0 0 10px gray;
+}
+
+main .galeria div img{
+    width: 100%;
+    border: 1px solid red;
+    transition: .5s;
+}
+
+main .galeria div img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+main .galeria div:first-child{
+    grid-area:uno;
+}
+
+main .galeria div:nth-child(2){
+    grid-area:dos;
+}
+
+main .galeria div:nth-child(3){
+    grid-area:tres;
+}
+
+main .galeria div:nth-child(4){
+    grid-area:cuatro;
+}
+
+main .galeria div:nth-child(5){
+    grid-area:cinco;
+}
+
+main .galeria div:last-child{
+    grid-area:seis;
+}
+
+main section{
+    display: grid;
+    grid-template-columns: repeat(2,400px);
+    grid-template-rows: repeat(3,1fr);
+    gap: 20px;justify-content: center;
+}
